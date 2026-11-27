@@ -1,0 +1,13 @@
+# Baysöz Labs <baysozlabs@proton.me> — adversarial demonstration lockfile.
+version = 4
+
+[[package]]
+name = "serdе"
+version = "1.0.210"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "tokio"
+version = "1.43.0"
+source = "git+https://github.com/tokio-rs/tokio?branch=main"
+checksum = "e6b9c8de5a6b0e5c3d33b1b04d8f6f5c6b6b0d1c0e0f0a0b0c0d0e0f0a0b0c0d"

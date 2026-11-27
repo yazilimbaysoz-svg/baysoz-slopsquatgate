@@ -1,0 +1,16 @@
+# Baysöz Labs <baysozlabs@proton.me> — repository hygiene rules.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.semgrep/
+dist/
+build/
+.coverage
+htmlcov/
+*.sarif
+.DS_Store

